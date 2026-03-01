@@ -120,15 +120,17 @@ sayilar.forEach((sayi) => {
     ucetambolunenler.push(sayi);
   }
 });
-/* kodlar buraya */
+
 
 // 3c çözümü:
-
-/* kodlar buraya */
+//`ucetambolunenler` dizisindeki sayıların toplamını .reduce metoduyla bulup, sonucu `ucebolunenlerintoplami` değişkenine yazdırın (.reduce metodunu kullanın)
+ucebolunenlerintoplami = ucetambolunenler.reduce((toplam, sayi) => toplam + sayi, 0);
 
 // 3d çözümü
 
-/* kodlar buraya */
+/* 		3d. `besyuzdenkucuksayilar` adında bir dizi oluşturarak, sayilar dizisinin içindeki 500'den küçük sayıları bu diziye atayın (.filter metodunu kullanın)
+ */
+besyuzdenkucuksayilar = sayilar.filter((sayi) => sayi < 500);
 
 // 3e çözümü
 
