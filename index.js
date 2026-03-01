@@ -142,6 +142,24 @@ siralisayilar = besyuzdenkucuksayilar.sort((a, b) => a - b);
 
 /* 3f. `tekraredensayilar` adında bir dizi oluşturun. sayilar dizisi içerisindeki bazı sayılar birden fazla kere yazılmış. sayilar dizisi içerisinde birden fazla kez yazılmış sayıları tespit ederek kaç kere tekrar edildiğini belirten bir string oluşturulup `tekraredensayilar` dizisine aktarılmasını istiyoruz. Örnek string: "{sayı} sayısı {tekrarSayisi} kere tekrar edilmiştir" */
 
+tekraredensayilar = [];
+const sayiTekrarSayisi = {};
+
+sayilar.forEach((sayi) => {
+  if (sayiTekrarSayisi[sayi]) {
+    sayiTekrarSayisi[sayi]++;
+  } else {
+    sayiTekrarSayisi[sayi] = 1;
+  }
+});
+
+for (const sayi in sayiTekrarSayisi) {
+  if (sayiTekrarSayisi[sayi] > 1) {
+    tekraredensayilar.push(
+      `${sayi} sayısı ${sayiTekrarSayisi[sayi]} kere tekrar edilmiştir`
+    );
+  }
+}     
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
 function sa() {
